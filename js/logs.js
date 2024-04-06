@@ -3,7 +3,7 @@ class secureLogs {
     #verifiedLogs;
     #logsTimer;
     #maxLuck = {
-        "ol-faithful": 1,
+        "ol-faithful": 10000,
         "mulch-mallet": 1.2,
         "mud-sickle": 1.35,
         "dirt-ravager": 1.8,
