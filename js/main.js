@@ -468,8 +468,8 @@ function goDirection(direction, speed) {
     } else {
         clearInterval(loopTimer);
         if (speed === undefined) {
-            if (hasGear("real-vitriol")) miningSpeed = 15;
-            if (hasGear("haste-2-beacon")) miningSpeed = 10;
+            if (hasGear("real-vitriol")) miningSpeed = 10;
+            if (hasGear("haste-2-beacon")) miningSpeed = 5;
         } else miningSpeed = speed;
         loopTimer = setInterval(movePlayer, miningSpeed, direction);
         currDirection = direction;
@@ -588,9 +588,9 @@ function createIndex() {
     let output = "";
     let luckBoost = verifiedOres.getLuckBoosts()[currentPickaxe];
     if (hasGear("real-candilium"))
-        luckBoost *= 1.1;
+        luckBoost *= 1.5;
     if (hasGear("fortune-3-book"))
-        luckBoost *= 1.6;
+        luckBoost *= 2.5;
     for (let i = 0; i < allLayers.length; i++) {
         output += `<div class="layerDisplay" id="layerDisplay${allLayersNames[i]}">`;
         output += `<p class="oreTitle" id="${allLayersNames[i]}Title">`;
